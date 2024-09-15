@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate of Participation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            border: 2px solid #000;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            width: 100px;
+            height: 50px;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin: 20px 0;
+        }
+
+        .recipient {
+            font-size: 24px;
+            font-style: italic;
+            margin: 20px 0;
+        }
+
+        .details {
+            margin: 20px 0;
+        }
+
+        .signatures {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+
+        .signature {
+            width: 200px;
+            text-align: center;
+        }
+
+        .signature-line {
+            width: 100%;
+            border-top: 1px solid #000;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">Logo 1</div>
+        <div class="logo">Logo 2</div>
+        <div class="logo">Logo 3</div>
+    </div>
+
+    <h1>CERTIFICATE</h1>
+    <p>OF PARTICIPATION</p>
+
+    <p>This is presented to</p>
+    <p class="recipient">{{ participant_name }}</p>
+
+    <p class="details">
+        for participating in the {{ event_name }}<br>
+        organized in partnership with {{ partner_name }},<br>
+        held on {{ event_date }} at {{ event_location }}
+    </p>
+
+    <div class="signatures">
+        <div class="signature">
+            <div class="signature-line"></div>
+            <p>{{ signatory_1_name }}<br>{{ signatory_1_title }}</p>
+        </div>
+        <div class="signature">
+            <div class="signature-line"></div>
+            <p>{{ signatory_2_name }}<br>{{ signatory_2_title }}</p>
+        </div>
+    </div>
+</body>
+</html>
